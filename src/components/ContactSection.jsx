@@ -6,6 +6,7 @@ import {
   Twitter,
   Twitch,
   MessageCircle,
+  Instagram,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
@@ -19,7 +20,6 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSending(true);
 
-    // Show loading toast
     toast.loading("Sending message...", { id: "contactToast" });
 
     const form = formRef.current;
@@ -53,13 +53,34 @@ export const ContactSection = () => {
     }
   };
 
+  const socialLinks = [
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/melvin-benjamin-b746a022b/",
+      label: "LinkedIn",
+    },
+    {
+      icon: Twitter,
+      href: "https://x.com/Melvyn__Breeze",
+      label: "Twitter",
+    },
+    {
+      icon: Twitch,
+      href: "https://www.twitch.tv/settings/profile",
+      label: "Twitch",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/breeze__mel/",
+      label: "Instagram",
+    },
+  ];
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
-      {/* Single Toaster at the top-right */}
       <Toaster position="top-right" />
 
       <div className="container mx-auto max-w-5xl">
-        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +111,6 @@ export const ContactSection = () => {
             viewport={{ once: true }}
             className="space-y-10"
           >
-            {/* Contact Information */}
             <div>
               <h3 className="text-2xl font-semibold mb-6">
                 Contact Information
@@ -102,7 +122,7 @@ export const ContactSection = () => {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-left">Email</h4>
+                    <h4 className="font-medium">Email</h4>
                     <a
                       href="mailto:melvinbenjamin777@gmail.com"
                       className="text-muted-foreground hover:text-primary transition"
@@ -117,7 +137,7 @@ export const ContactSection = () => {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-left">Phone</h4>
+                    <h4 className="font-medium">Phone</h4>
                     <a
                       href="tel:+2348166927834"
                       className="text-muted-foreground hover:text-primary transition"
@@ -132,8 +152,8 @@ export const ContactSection = () => {
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-left">Location</h4>
-                    <p className="text-muted-foreground hover:text-primary">
+                    <h4 className="font-medium">Location</h4>
+                    <p className="text-muted-foreground">
                       Maryland, Ikeja, Lagos State.
                     </p>
                   </div>
@@ -143,14 +163,15 @@ export const ContactSection = () => {
 
             {/* Socials */}
             <div>
-              <h4 className="font-medium mb-4 text-left">Connect With Me</h4>
+              <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
-                {[Linkedin, Twitter, Twitch].map((Icon, i) => (
+                {socialLinks.map(({ icon: Icon, href, label }, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={href}
                     target="_blank"
                     rel="noreferrer"
+                    aria-label={label}
                     className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition"
                   >
                     <Icon className="h-5 w-5" />
@@ -170,47 +191,52 @@ export const ContactSection = () => {
           >
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-            <form
-              ref={formRef}
-              onSubmit={handleSubmit}
-              className="space-y-6"
-            >
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your Name"
-                className="w-full px-4 py-3 rounded-md border bg-background focus:ring-2 focus:ring-primary"
-              />
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+  {/* REQUIRED: FormSubmit settings */}
+  <input type="hidden" name="_subject" value="New Contact Message 🚀" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_captcha" value="false" />
 
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Your Email"
-                className="w-full px-4 py-3 rounded-md border bg-background focus:ring-2 focus:ring-primary"
-              />
+  {/* Optional but recommended */}
+  <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I’ll get back to you shortly." />
 
-              <textarea
-                name="message"
-                rows="4"
-                required
-                placeholder="Tell me about your project..."
-                className="w-full px-4 py-3 rounded-md border bg-background focus:ring-2 focus:ring-primary resize-none"
-              />
+  <input
+    type="text"
+    name="name"
+    required
+    placeholder="Your Name"
+    className="w-full px-4 py-3 rounded-md border bg-background focus:ring-2 focus:ring-primary"
+  />
 
-              <button
-                type="submit"
-                disabled={isSending}
-                className={`w-full py-3 rounded-md font-medium transition ${
-                  isSending
-                    ? "bg-primary/70 cursor-not-allowed"
-                    : "bg-primary hover:opacity-90 text-white"
-                }`}
-              >
-                {isSending ? "Sending..." : "Send Message"}
-              </button>
-            </form>
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="Your Email"
+    className="w-full px-4 py-3 rounded-md border bg-background focus:ring-2 focus:ring-primary"
+  />
+
+  <textarea
+    name="message"
+    rows="4"
+    required
+    placeholder="Tell me about your project..."
+    className="w-full px-4 py-3 rounded-md border bg-background focus:ring-2 focus:ring-primary resize-none"
+  />
+
+  <button
+    type="submit"
+    disabled={isSending}
+    className={`w-full py-3 rounded-md font-medium transition ${
+      isSending
+        ? "bg-primary/70 cursor-not-allowed"
+        : "bg-primary hover:opacity-90 text-white"
+    }`}
+  >
+    {isSending ? "Sending..." : "Send Message"}
+  </button>
+</form>
+
           </motion.div>
         </div>
       </div>
