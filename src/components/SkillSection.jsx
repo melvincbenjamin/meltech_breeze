@@ -6,6 +6,7 @@ const skills = [
   { id: 2, name: "JavaScript (ES6+)", level: 90, category: "Frontend" },
   { id: 3, name: "TypeScript", level: 80, category: "Frontend" },
   { id: 4, name: "React.js", level: 95, category: "Frontend" },
+  { id: 4, name: "Next.js", level: 85, category: "Frontend" },
   { id: 5, name: "Tailwind CSS", level: 90, category: "Frontend" },
   { id: 6, name: "Bootstrap", level: 90, category: "Frontend" },
 
@@ -15,14 +16,11 @@ const skills = [
   { id: 9, name: "Django REST Framework", level: 85, category: "Backend" },
   { id: 10, name: "RESTful APIs", level: 85, category: "Backend" },
   { id: 11, name: "JWT Authentication", level: 80, category: "Backend" },
-  { id: 12, name: "Firebase (Auth & DB)", level: 95, category: "Backend" },
 
   // Tools
   { id: 13, name: "Git", level: 90, category: "Tools" },
   { id: 14, name: "GitHub", level: 90, category: "Tools" },
   { id: 15, name: "Supabase", level: 80, category: "Tools" },
-  { id: 16, name: "Agile / Scrum", level: 80, category: "Tools" },
-  { id: 17, name: "Performance Optimization", level: 85, category: "Tools" },
   { id: 18, name: "Firebase (Hosting)", level: 95, category: "Tools" },
 ];
 
