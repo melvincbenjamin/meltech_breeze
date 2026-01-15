@@ -11,6 +11,7 @@ const skills = [
   // Frontend
   { id: 1, name: "HTML5 / CSS3", level: 4, category: CATEGORIES.FRONTEND },
   { id: 2, name: "JavaScript (ES6+)", level: 4, category: CATEGORIES.FRONTEND },
+  { id: 2, name: "TypeScript", level: 4, category: CATEGORIES.FRONTEND },
   { id: 3, name: "React.js", level: 4, category: CATEGORIES.FRONTEND },
   { id: 4, name: "Next.js", level: 3, category: CATEGORIES.FRONTEND },
   { id: 5, name: "Tailwind CSS", level: 4, category: CATEGORIES.FRONTEND },
