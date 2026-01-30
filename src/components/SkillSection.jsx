@@ -10,15 +10,15 @@ const CATEGORIES = {
 const skills = [
   // Frontend
   { id: 1, name: "HTML5 / CSS3", level: 4, category: CATEGORIES.FRONTEND },
-  { id: 2, name: "JavaScript (ES6+)", level: 4, category: CATEGORIES.FRONTEND },
-  { id: 2, name: "TypeScript", level: 4, category: CATEGORIES.FRONTEND },
+  { id: 2, name: "JavaScript (ES6+)", level: 3, category: CATEGORIES.FRONTEND },
+  { id: 2, name: "TypeScript", level: 3, category: CATEGORIES.FRONTEND },
   { id: 3, name: "React.js", level: 4, category: CATEGORIES.FRONTEND },
   { id: 4, name: "Next.js", level: 3, category: CATEGORIES.FRONTEND },
-  { id: 5, name: "Tailwind CSS", level: 4, category: CATEGORIES.FRONTEND },
+  { id: 5, name: "Tailwind CSS", level: 3, category: CATEGORIES.FRONTEND },
 
   // Backend
   { id: 6, name: "Python", level: 4, category: CATEGORIES.BACKEND },
-  { id: 7, name: "Django", level: 4, category: CATEGORIES.BACKEND },
+  { id: 7, name: "Django", level: 3, category: CATEGORIES.BACKEND },
   { id: 8, name: "Django REST Framework", level: 3, category: CATEGORIES.BACKEND },
   { id: 9, name: "REST APIs", level: 3, category: CATEGORIES.BACKEND },
   { id: 10, name: "JWT Authentication", level: 3, category: CATEGORIES.BACKEND },
