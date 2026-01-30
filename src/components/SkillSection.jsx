@@ -11,23 +11,23 @@ const skills = [
   // Frontend
   { id: 1, name: "HTML5 / CSS3", level: 4, category: CATEGORIES.FRONTEND },
   { id: 2, name: "JavaScript (ES6+)", level: 3, category: CATEGORIES.FRONTEND },
-  { id: 2, name: "TypeScript", level: 3, category: CATEGORIES.FRONTEND },
-  { id: 3, name: "React.js", level: 4, category: CATEGORIES.FRONTEND },
-  { id: 4, name: "Next.js", level: 3, category: CATEGORIES.FRONTEND },
-  { id: 5, name: "Tailwind CSS", level: 3, category: CATEGORIES.FRONTEND },
+  { id: 3, name: "TypeScript", level: 3, category: CATEGORIES.FRONTEND },
+  { id: 4, name: "React.js", level: 4, category: CATEGORIES.FRONTEND },
+  { id: 5, name: "Next.js", level: 3, category: CATEGORIES.FRONTEND },
+  { id: 6, name: "Tailwind CSS", level: 3, category: CATEGORIES.FRONTEND },
 
   // Backend
-  { id: 6, name: "Python", level: 4, category: CATEGORIES.BACKEND },
-  { id: 7, name: "Django", level: 3, category: CATEGORIES.BACKEND },
-  { id: 8, name: "Django REST Framework", level: 3, category: CATEGORIES.BACKEND },
-  { id: 9, name: "REST APIs", level: 3, category: CATEGORIES.BACKEND },
-  { id: 10, name: "JWT Authentication", level: 3, category: CATEGORIES.BACKEND },
+  { id: 7, name: "Python", level: 4, category: CATEGORIES.BACKEND },
+  { id: 8, name: "Django", level: 3, category: CATEGORIES.BACKEND },
+  { id: 9, name: "Django REST Framework", level: 3, category: CATEGORIES.BACKEND },
+  { id: 10, name: "REST APIs", level: 3, category: CATEGORIES.BACKEND },
+  { id: 11, name: "JWT Authentication", level: 3, category: CATEGORIES.BACKEND },
 
   // Tools
-  { id: 11, name: "Git", level: 4, category: CATEGORIES.TOOLS },
-  { id: 12, name: "GitHub", level: 4, category: CATEGORIES.TOOLS },
-  { id: 13, name: "Supabase", level: 3, category: CATEGORIES.TOOLS },
-  { id: 14, name: "Firebase (Hosting)", level: 4, category: CATEGORIES.TOOLS },
+  { id: 12, name: "Git", level: 4, category: CATEGORIES.TOOLS },
+  { id: 13, name: "GitHub", level: 4, category: CATEGORIES.TOOLS },
+  { id: 14, name: "Supabase", level: 3, category: CATEGORIES.TOOLS },
+  { id: 15, name: "Firebase (Hosting)", level: 4, category: CATEGORIES.TOOLS },
 ];
 
 const LEVEL_MAP = {
