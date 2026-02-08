@@ -5,7 +5,6 @@ import image2 from "../assets/images/image2.png";
 import image4 from "../assets/images/image4.png";
 import image7 from "../assets/images/image7.png";
 import image8 from "../assets/images/image8.png";
-import image9 from "../assets/images/image9.png";
 
 const projects = [
   {
@@ -57,16 +56,6 @@ const projects = [
     tags: ["React.js", "BootstrapCSS", "Supabase", "Firebase"],
     demoUrl: "https://www.adeleketennisacademy.com/",
     githubUrl: "https://github.com/melvincbenjamin/Coach-Julius",
-  },
-  {
-    id: 6,
-    title: "MelTech Personal Portfolio",
-    description:
-      "Personal portfolio website showcasing my full-stack development projects, technical skills, and cybersecurity expertise. Designed with clean architecture, responsive UI, and interactive elements to highlight my professional experience and technical capabilities. ",
-    image: image9,
-    tags: ["React.js", "BootstrapCSS", "Supabase", "Firebase"],
-    demoUrl: "https://melvincbenjamin-portfolio.web.app/",
-    githubUrl: "https://github.com/melvincbenjamin/new-melvin-portfolio",
   },
 ];
 
