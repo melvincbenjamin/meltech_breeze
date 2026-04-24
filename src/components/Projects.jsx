@@ -5,23 +5,24 @@ import image2 from "../assets/images/image2.png";
 import image4 from "../assets/images/image4.png";
 import image7 from "../assets/images/image7.png";
 import image8 from "../assets/images/image8.png";
+import image10 from "../assets/images/image10.png";
 
 const projects = [
   {
     id: 1,
-    title: "Property Management",
+    title: "Property Management Platform",
     description:
-      "A property management platform focused on improving tenant experience and landlord profitability.",
+      "Full-stack property management system built with React and Django REST API featuring authentication, secure data handling and scalable backend architecture.",
     image: image1,
-    tags: ["React", "TailwindCSS", "Django"],
+    tags: ["React", "TailwindCSS", "Django", "REST API"],
     demoUrl: "https://city-wide-q6gz.onrender.com/",
     githubUrl: "https://city-wide-q6gz.onrender.com/",
   },
   {
     id: 2,
-    title: "The Best Apartment",
+    title: "Homly Apartment Finder",
     description:
-      "Looking for the best apartment for rent, this website is for you.",
+      "Apartment rental platform with secure API integration and optimized frontend performance.",
     image: image2,
     tags: ["React", "Bootstrap", "Django"],
     demoUrl: "https://homly-frontend-eight.vercel.app/",
@@ -29,33 +30,55 @@ const projects = [
   },
   {
     id: 3,
-    title: "Design, Print, Deliver",
+    title: "SpeedUp Creative Agency",
     description:
-      "Helping businesses and individuals stand out with compelling design and print solutions on time, every time.",
+      "Business platform powered by Django backend, optimized for performance, SEO and scalability.",
     image: image4,
-    tags: ["React.js", "TailwindCSS", "Django"],
+    tags: ["React", "TailwindCSS", "Django"],
     demoUrl: "https://speedupcreative.onrender.com/",
     githubUrl: "https://speedupcreative.onrender.com/",
   },
   {
     id: 4,
-    title: "Dennis Tennis Academy Platform",
+    title: "Dennis Tennis Academy",
     description:
-      "A modern web platform for Dennis Tennis Academy in Dubai, showcasing courses, schedules, and training programs for both Padel and Tennis students. Built for responsive performance and seamless user experience.",
+      "Production website deployed for a Dubai academy with focus on performance, SEO and scalable architecture.",
     image: image7,
-    tags: ["React.js", "BootstrapCSS", "Firebase"],
+    tags: ["React", "Firebase"],
     demoUrl: "https://www.denisstennis.com/",
     githubUrl: "https://github.com/melvincbenjamin/Coach_Daniel-New",
   },
   {
     id: 5,
-    title: "Adeleke Tennis Academy Web Portal",
+    title: "Adeleke Tennis Academy Portal",
     description:
-      "A comprehensive web portal for Adeleke Tennis Academy, USA, providing students and parents with easy access to schedules, training programs, and academy information. Developed with performance, responsiveness, and usability in mind.",
+      "Full responsive portal using Supabase & Firebase backend integrations.",
     image: image8,
-    tags: ["React.js", "BootstrapCSS", "Supabase", "Firebase"],
+    tags: ["React", "Supabase", "Firebase"],
     demoUrl: "https://www.adeleketennisacademy.com/",
     githubUrl: "https://github.com/melvincbenjamin/Coach-Julius",
+  },
+  {
+    id: 6,
+    title: "NDTDF Web Platform",
+    description:
+      "Modern responsive website built with performance and scalability best practices.",
+    image: image10,
+    tags: ["React", "TailwindCSS", "Firebase"],
+    demoUrl: "https://ndtdf.com/",
+    githubUrl: "https://github.com/melvincbenjamin/Nigerian-Diaspora-Tennis-Development-Forum-LCC",
+  },
+
+  // ⭐ NEW CYBERSECURITY PROJECT
+  {
+    id: 7,
+    title: "Web App Security Lab",
+    description:
+      "Hands-on cybersecurity lab focused on OWASP Top 10 vulnerabilities including XSS, SQL Injection, Authentication flaws and secure coding practices.",
+    image: image4,
+    tags: ["Python", "Django", "Cybersecurity", "OWASP"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/",
   },
 ];
 
@@ -68,8 +91,8 @@ export const ProjectSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Selected projects demonstrating problem-solving, clean architecture,
-          and attention to user experience.
+          Web Development and cybersecurity projects demonstrating secure development,
+          backend architecture and real-world deployment experience.
         </p>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -78,7 +101,6 @@ export const ProjectSection = () => {
               key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-sm transition hover:shadow-md"
             >
-              {/* Image */}
               <div className="h-48 overflow-hidden">
                 <img
                   src={project.image}
@@ -87,46 +109,28 @@ export const ProjectSection = () => {
                 />
               </div>
 
-              {/* Tags */}
-                <div className="flex flex-wrap gap-2 p-5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-2 p-5">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
-              {/* Content */}
               <div className="p-5 space-y-4">
-                <h3 className="text-lg font-semibold">
-                  {project.title}
-                </h3>
-
+                <h3 className="text-lg font-semibold">{project.title}</h3>
                 <p className="text-sm text-muted-foreground">
                   {project.description}
                 </p>
 
-
-                {/* Action Icons */}
                 <div className="flex items-center gap-4 pt-3">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
-                  >
+                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={24} />
                   </a>
-
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
-                  >
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github size={24} />
                   </a>
                 </div>
@@ -134,11 +138,12 @@ export const ProjectSection = () => {
             </div>
           ))}
         </div>
-          <div className="p-6">
-            <a href="https://github.com/" className="cosmic-button">
-                Check my Github
-              </a>
-          </div>
+
+        <div className="p-6">
+          <a href="https://github.com/" className="cosmic-button">
+            Check my Github
+          </a>
+        </div>
       </div>
     </section>
   );

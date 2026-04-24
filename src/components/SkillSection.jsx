@@ -4,6 +4,7 @@ const CATEGORIES = {
   ALL: "All",
   FRONTEND: "Frontend",
   BACKEND: "Backend",
+  CYBERSECURITY: "Cybersecurity",
   TOOLS: "Tools",
 };
 
@@ -16,12 +17,20 @@ const skills = [
   { id: 5, name: "Next.js", level: 3, category: CATEGORIES.FRONTEND },
   { id: 6, name: "Tailwind CSS", level: 3, category: CATEGORIES.FRONTEND },
 
-  // Backend
+  // Backend (Python Django)
   { id: 7, name: "Python", level: 4, category: CATEGORIES.BACKEND },
   { id: 8, name: "Django", level: 3, category: CATEGORIES.BACKEND },
   { id: 9, name: "Django REST Framework", level: 3, category: CATEGORIES.BACKEND },
   { id: 10, name: "REST APIs", level: 3, category: CATEGORIES.BACKEND },
   { id: 11, name: "JWT Authentication", level: 3, category: CATEGORIES.BACKEND },
+
+  // Cybersecurity / AppSec
+  { id: 16, name: "OWASP Top 10", level: 3, category: CATEGORIES.CYBERSECURITY },
+  { id: 17, name: "Web App Security Basics", level: 3, category: CATEGORIES.CYBERSECURITY },
+  { id: 18, name: "Secure Coding Practices", level: 3, category: CATEGORIES.CYBERSECURITY },
+  { id: 19, name: "Networking Fundamentals", level: 3, category: CATEGORIES.CYBERSECURITY },
+  { id: 20, name: "Linux for Security", level: 3, category: CATEGORIES.CYBERSECURITY },
+  { id: 21, name: "Penetration Testing Basics", level: 2, category: CATEGORIES.CYBERSECURITY },
 
   // Tools
   { id: 12, name: "Git", level: 4, category: CATEGORIES.TOOLS },
@@ -54,13 +63,11 @@ export const SkillSection = () => {
           Technical <span className="text-primary">Skills</span>
         </h2>
 
-        {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              aria-pressed={activeFilter === filter}
               className={`px-5 py-2 rounded-full border transition-all duration-300
                 ${
                   activeFilter === filter
@@ -74,7 +81,6 @@ export const SkillSection = () => {
           ))}
         </div>
 
-        {/* Skills */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSkills.map((skill) => (
             <div
@@ -85,14 +91,7 @@ export const SkillSection = () => {
                 {skill.name}
               </p>
 
-              <div
-                className="w-full bg-gray-200 rounded-full h-2 overflow-hidden"
-                role="progressbar"
-                aria-valuenow={LEVEL_MAP[skill.level]}
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-label={`${skill.name} proficiency`}
-              >
+              <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                 <div
                   className="bg-primary h-2 rounded-full transition-all duration-700"
                   style={{ width: `${LEVEL_MAP[skill.level]}%` }}

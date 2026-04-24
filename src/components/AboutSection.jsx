@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, Shield } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -12,15 +12,18 @@ export const AboutSection = () => {
           {/* Left Content */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Frontend Web Developer & Tech Creator
+              Frontend Developer • Python Django Backend • AppSec in Progress
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize in creating **responsive, accessible, and high-performance web applications** using modern technologies.
+              I build modern, responsive and high-performance web applications using React and modern JavaScript. 
+              I also develop robust backend systems with Python and Django to deliver complete end-to-end solutions.
             </p>
 
             <p className="text-muted-foreground">
-              I am passionate about crafting elegant solutions to complex problems. Constantly exploring new technologies and techniques, I strive to stay at the forefront of the ever-evolving web landscape.
+              I am currently transitioning into **Cybersecurity (Application Security)**, focusing on secure coding, 
+              web application vulnerabilities, networking fundamentals, and building systems that are not just functional 
+              but secure by design.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -29,7 +32,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="/Melvin_Benjamin_Frontend_CV.pdf"
+                href="/public/Updated Frontend web dev CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
@@ -41,34 +44,40 @@ export const AboutSection = () => {
 
           {/* Right Cards */}
           <div className="grid grid-cols-1 gap-6">
+
+            {/* Web Dev */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
+                  <h4 className="font-semibold text-lg">Web  Development</h4>
                   <p>
-                    Building **modern, responsive websites and web applications** using React, JavaScript, and Python to create seamless user experiences.
+                    Building modern web applications using React, JavaScript, Python and Django. 
+                    From frontend interfaces to backend APIs and deployment.
                   </p>
                 </div>
               </div>
             </div>
 
+            {/* Cybersecurity */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  <Shield className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">Cybersecurity (In Progress)</h4>
                   <p>
-                    Crafting **intuitive and visually appealing interfaces** that delight users while maintaining accessibility and best practices.
+                    Studying Application Security, secure coding practices, web vulnerabilities (OWASP Top 10), 
+                    networking fundamentals, and penetration testing.
                   </p>
                 </div>
               </div>
             </div>
 
+            {/* Experience */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -77,11 +86,13 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Professional Experience</h4>
                   <p>
-                    Over 5 years of **full-stack development experience**, delivering scalable applications and collaborating on projects from concept to deployment.
+                    Over 5 years building and deploying scalable web solutions, collaborating with clients, 
+                    and continuously improving development and security skills.
                   </p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
